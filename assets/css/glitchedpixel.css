@@ -1,0 +1,25 @@
+body {
+    background-color: #000408;
+}
+
+div.content {
+    margin: auto;
+    width: 720px;
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 32pt;
+    padding: 48px;
+}
+
+p {
+    color: #fff8e0;
+    font-family: sans-serif;
+    font-size: 11pt;
+}
+
+p.center {
+    text-align: center;
+}
