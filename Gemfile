@@ -8,7 +8,6 @@ gem "webrick"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
-  gem "bootstrap", ">= 5.2.3"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
