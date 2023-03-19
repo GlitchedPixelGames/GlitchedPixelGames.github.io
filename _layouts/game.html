@@ -1,0 +1,19 @@
+---
+layout: base
+---
+
+<div class="row">
+    {%- if page.title -%}
+    <h1>{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+</div>
+
+<div class="toast show fixed-bottom-right d-none d-md-block" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="d-flex flex-row-reverse">
+        <div class="toast-body">
+            <iframe src="https://store.steampowered.com/widget/{{ page.steam_id }}/" width="600" height="200"></iframe>
+        </div>
+    </div>
+</div>

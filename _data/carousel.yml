@@ -1,0 +1,14 @@
+- title: Road Domination
+  body: >-
+    A casual action game. Player drives around a city, capturing streets and districts,
+    avoiding police cars, and using traps to get away. When all areas are seized,
+    the player captures the neighbourhood and wins current level.
+  image: /assets/headers/Road-Domination.png
+  url: /games/Road-Domination/
+
+- title: Road Domination v0.4.0
+  body: >-
+    In this month's update, we're bringing you another 3 desert levels.
+    There are also new car colours, as well as a new sport car.
+  image: /assets/headers/2023-03-13-Road-Domination-v0.4.0.png
+  url: /2023/03/13/Road-Domination-v0.4.0.html

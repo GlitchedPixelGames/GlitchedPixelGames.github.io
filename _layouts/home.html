@@ -1,0 +1,36 @@
+---
+layout: base
+---
+
+<div class="row">
+    {%- if page.title -%}
+    <h1>{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {% assign posts = site.posts %}
+
+    {%- if posts.size > 0 -%}
+    {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}
+
+    {%- for post in posts -%}
+    <div class="col-12 col-md-6 p-2">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+            <div class="card shadow-sm text-bg-dark text-light">
+                <img src="{{ '/assets/thumbnails/' | append: post.thumbnail | relative_url }}" class="card-img"/>
+                <div class="card-img-overlay d-none d-md-block">
+                    <h5 class="card-title">{{ post.title | escape }}</h5>
+                    {%- if site.summary -%}
+                    <p class="card-text">{{ post.summary }}</p>
+                    {%- endif -%}
+                    <p class="card-text"><small>{{ post.date | date: date_format }}</small></p>
+                </div>
+            </div>
+            </a>
+    </div>
+    {%- endfor -%}
+
+    {%- endif -%}
+
+</div>

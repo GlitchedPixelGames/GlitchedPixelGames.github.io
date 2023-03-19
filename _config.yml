@@ -1,0 +1,20 @@
+title: Glitched Pixel
+email: support@glitchedpixel.games
+description: >-
+  Indie games developer.
+baseurl: /
+url: https://glitchedpixel.games
+lang: en
+
+sass:
+  load_paths:
+    - _sass
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - .idea
+  - .gitignore
+  - _art

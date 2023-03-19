@@ -1,0 +1,55 @@
+@import "vars";
+@import "bootstrap";
+
+h1 {
+    font-stretch: semi-condensed;
+}
+
+h2 {
+    font-stretch: semi-condensed;
+}
+
+h3 {
+    font-stretch: semi-condensed;
+}
+
+h4 {
+    font-stretch: semi-condensed;
+}
+
+h5 {
+    font-stretch: semi-condensed;
+}
+
+h6 {
+    font-stretch: semi-condensed;
+}
+
+.carousel-caption {
+    background-color: rgba(black, .5);
+}
+
+.navbar-brand {
+    font-stretch: semi-condensed;
+    font-weight: 600;
+}
+
+.sticky-top {
+    transition: all 0.3s ease-in;
+}
+
+.sticky-top a {
+    transition: all 0.3s ease-in;
+}
+
+.sticky-top-stuck .navbar.sticky-top {
+    @extend .bg-dark;
+    @extend .bg-gradient;
+    @extend .navbar-dark;
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}

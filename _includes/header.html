@@ -1,0 +1,85 @@
+{%- if page.header_carousel -%}
+<div id="carouselIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        {%- for item in site.data.carousel -%}
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="{{ forloop.index | minus: 1 }}"
+                {%- if forloop.index == 1 -%}
+                class="active" aria-current="true"
+                {%- endif -%}
+                aria-label="Slide {{ forloop.index }}"></button>
+        {%- endfor -%}
+    </div>
+    <div class="carousel-inner">
+        {%- for item in site.data.carousel -%}
+        <div aria-label="Item {{ forloop.index }}"
+             {%- if forloop.index == 1 -%}
+             class="carousel-item active"
+             {%- else -%}
+             class="carousel-item"
+             {%- endif -%}
+             >
+            <a href="{{ item.url | relative_url }}">
+                <img src="{{ item.image | relative_url }}" class="d-block w-100" alt="{{ item.title | escape }}">
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h4>{{ item.title | escape }}</h4>
+                <p>{{ item.body | escape }}</p>
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{%- else -%}
+
+{%- if page.header -%}
+<div>
+    <img src="{{ '/assets/headers/' | append: page.header | relative_url }}" class="d-block w-100"
+         alt="{{ item.title | escape }}">
+</div>
+{%- endif -%}
+
+{%- endif -%}
+
+<span class="position-absolute before-sticky-top"></span>
+
+<header class="navbar bd-navbar navbar-expand-lg sticky-top shadow bg-light">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" rel="author" href='{{ "/" | relative_url }}'>
+                <img src="/assets/images/logo64.png" alt="{{ site.title | escape }}"
+                     class="d-inline-block align-text-middle">
+                {{ site.title | escape }}
+            </a>
+            {%- assign default_paths = site.pages | map: "path" -%}
+            {%- assign page_paths = site.header_pages | default: default_paths -%}
+            {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+            {%- if titles_size > 0 -%}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    {%- for item in site.data.navbar -%}
+                    <a class="nav-link" href="{{ item.url | relative_url }}">
+                        {{ item.title | escape }}
+                    </a>
+                    {%- endfor -%}
+                </div>
+            </div>
+            {%- endif -%}
+        </div>
+    </nav>
+</header>

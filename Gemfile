@@ -1,0 +1,21 @@
+# Run Jekyll with `bundle exec`, like so:
+#     bundle exec jekyll serve --livereload
+
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"
+
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "bootstrap", ">= 5.2.3"
+end
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", "~> 1.2"
+  gem "tzinfo-data"
+end
+
+gem "wdm", "~> 0.1.0", :platforms => [:mingw, :x64_mingw, :mswin]
+
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
