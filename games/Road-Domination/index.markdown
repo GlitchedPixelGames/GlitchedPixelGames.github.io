@@ -5,13 +5,11 @@ header: Road-Domination.png
 steam_id: 2226920
 ---
 
-### <span class="badge text-bg-success">EARLY ACCESS</span>
-
 A casual action game. Player drives around a city, capturing streets and districts,
 avoiding police cars, and using traps to get away. When all areas are seized,
 the player captures the neighbourhood and wins current level.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/s0yNRZJZK2c"></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/lsUS3HhDcYI"></iframe>
 
 ## Game Features
 
